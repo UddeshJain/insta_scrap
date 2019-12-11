@@ -34,6 +34,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.get('/', (req, res) => {
+    res.send("Hello")
+})
+
 // Home Page
 app.get('/instagram.tool', (req, res) => {
     res.render('index')
